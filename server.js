@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
 
-const app = express();
+const app = express();x
 app.use(cors());
 app.use(express.json());
 
@@ -572,6 +572,8 @@ app.put("/exams/:id", verifyToken, async (req, res) => {
 // 🚀 START
 // =======================
 
-app.listen(5000, () => {
-  console.log("server 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
